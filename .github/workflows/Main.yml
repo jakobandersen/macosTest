@@ -11,4 +11,4 @@ jobs:
     - name: PATH
       run: echo $PATH
     - name: list files
-      run: pip show -f Sphinx
+      run: pip3 show -f sphinx
