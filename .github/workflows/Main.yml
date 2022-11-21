@@ -1,0 +1,14 @@
+name: Main
+on: [push, pull_request]
+jobs:
+  macOS:
+    runs-on: macos-11
+    steps:
+    - name: Install pip dependencies
+      run: pip3 install sphinx>=3.5
+    - name: pip list
+      run: pip3 list -v
+    - name: PATH
+      run: echo $PATH
+    - name: GITHUB_PATH
+      run: echo $GITHUB_PATH
