@@ -10,5 +10,5 @@ jobs:
       run: pip3 list -v
     - name: PATH
       run: echo $PATH
-    - name: GITHUB_PATH
-      run: echo $GITHUB_PATH
+    - name: which
+      run: which sphinx-build
