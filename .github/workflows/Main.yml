@@ -12,3 +12,6 @@ jobs:
       run: echo $PATH
     - name: list files
       run: pip3 show -f sphinx
+    - name: exechelper
+      run: /usr/libexec/path_helper | sed -e 's/^PATH="//' -e 's/"; export PATH;//' | tr ":" "\n"  | tail -r
+
