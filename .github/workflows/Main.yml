@@ -14,4 +14,7 @@ jobs:
       run: pip3 show -f sphinx
     - name: exechelper
       run: /usr/libexec/path_helper | sed -e 's/^PATH="//' -e 's/"; export PATH;//' | tr ":" "\n"  | tail -r
+    - name: py print
+      run: python -c 'import os,sysconfig;print(sysconfig.get_path("scripts",f"{os.name}_user"))'
+
 
