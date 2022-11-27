@@ -17,7 +17,7 @@ jobs:
     - name: pip list
       run: |
         echo "user"
-        python3 -m pip --user list
+        python3 -m pip list --user
         echo "global"
         python3 -m pip list
     - name: list
