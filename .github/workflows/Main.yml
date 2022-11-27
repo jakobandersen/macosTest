@@ -16,15 +16,19 @@ jobs:
         python3 -m site --user-site
     - name: Install pip --user
       run: |
+        ls
         cd someModule
         python3 -m pip install . --user
         cd
+        ls
         python3 -m someModule
     - name: Install pip
       run: |
+        ls
         cd someModule
         python3 -m pip install .
         cd
+        ls
         python3 -m someModule
   macOS:
     runs-on: macos-11
