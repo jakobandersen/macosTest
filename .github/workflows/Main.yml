@@ -31,6 +31,12 @@ jobs:
       run: |
         cd someModule
         python3 -m pip install .
+    - name: pip list again
+      run: |
+        echo "user"
+        python3 -m pip list --user
+        echo "global"
+        python3 -m pip list
     - name: run package
       run: |
         cd
