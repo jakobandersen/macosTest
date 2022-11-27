@@ -1,0 +1,10 @@
+[metadata]
+name = someModule
+version = 0.0.1
+author = Someone
+author_email = somewhere@test.com
+description = A package just for testing.
+
+[options]
+packages =
+    someModule
