@@ -27,19 +27,14 @@ jobs:
         python3 -m pip list
     - name: list
       run: ls
-    - name: Install pip --user
-      run: |
-        ls
-        cd someModule
-        python3 -m pip install . --user
-        cd
-        ls
-        python3 -m someModule
     - name: Install pip
       run: |
-        ls
         cd someModule
         python3 -m pip install .
+    - name: run package
+      run: |
         cd
         ls
+        python3 -m pip show someModule
+        echo "running"
         python3 -m someModule
