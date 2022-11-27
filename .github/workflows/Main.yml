@@ -4,6 +4,11 @@ jobs:
   ubuntu:
     runs-on: ubuntu-22.04
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        submodules: 'recursive'
     - name: Install apt packages for Python stuff
       run: sudo apt install python3-setuptools python3-wheel
     - name: Print Python path stuff
